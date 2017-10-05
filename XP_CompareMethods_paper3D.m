@@ -72,7 +72,7 @@ for j=3%:4
             [q2,CF2]=Ellipsoid3D_Fitting_OBLIQUE(x,nn);
             toc;
             tic;
-            q3=Ellipsoid_Fitting_LLS(x);
+            q3=Ellipsoid3D_Fitting_LLS(x);
             toc;
             tic;
             q4=Ellipsoid3D_Fitting_LLS_SVD(x);
