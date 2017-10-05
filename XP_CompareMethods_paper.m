@@ -4,8 +4,7 @@ addpath(genpath('/usr/share/matlab2tikz-master'))
 n=15;
 theta1=pi/3;
 
-%sigma=[0,0.1,0.3];
-sigma=[0.1,0.15,0.2,0.25,0.3,0.35];
+sigma=[0,0.1,0.3];
 s1=4;
 s2=1;
 c1=4;
@@ -26,7 +25,7 @@ t{3}=[t{3},pi/2,pi];
 t{4}=linspace(-pi/4+pi/2,pi/4+pi/2,n);
 
 
-for j=4:4
+for j=1:4
     n=length(t{j});
     for k=1:length(sigma)
         %% Generates the input coordinates
@@ -72,7 +71,7 @@ for j=4:4
         end
         
         m0=min(CF0);m1=min(CF1);
-        l=50000;
+        l=500;
         figure(3);semilogy(1:l,CF0(1:l)-m0,'b',1:l,CF1(1:l)-m1,'g');
         xlabel('Iterations number');ylabel('Cost function');
         legend('DR','DR-SVD')
